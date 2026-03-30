@@ -7,7 +7,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
-      background: #000000;
+      background: transparent;
       width: 100%;
       overflow: hidden;
     }
@@ -31,21 +31,5 @@
   >
     <a href="https://www.trustpilot.com/review/hellenictechnologies.com" target="_blank" rel="noopener">Trustpilot</a>
   </div>
-
-  <script>
-    // Once the Trustpilot iframe is injected, shrink the body to exactly its height
-    function fitToWidget() {
-      var iframe = document.querySelector('.trustpilot-widget iframe');
-      if (iframe) {
-        var h = iframe.offsetHeight || 24;
-        document.documentElement.style.height = h + 'px';
-        document.body.style.height = h + 'px';
-      } else {
-        setTimeout(fitToWidget, 100);
-      }
-    }
-    window.addEventListener('load', function() { setTimeout(fitToWidget, 500); });
-    setTimeout(fitToWidget, 1500);
-  </script>
 </body>
 </html>
